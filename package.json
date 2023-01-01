@@ -1,0 +1,27 @@
+{
+  "name": "sapcloudconnectoradmin",
+  "version": "1.0.0",
+  "description": "Node js Application to administrate Cloud Connector",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mottapuffs/SAPCloudConnectorAdmin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mottapuffs/SAPCloudConnectorAdmin/issues"
+  },
+  "homepage": "https://github.com/mottapuffs/SAPCloudConnectorAdmin#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "url-exist": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

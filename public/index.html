@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Cloud Connector Cockpit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+       <div class="homebuttons">
+        <p class="reloadHome"><a href="javascript:btnHome();" class="reloadbtn" id="reloadbtn">Home</a></p>
+        <p class="addremoveCC"><a href="javascript:btnaddrem();" class="addremoveCCbtn" id="addremoveCCbtn">Add CC</a></p>
+       </div>
+    <section class="header">
+        <h1>SAP Cloud Connector Cockpit</h1>
+      
+    </section>
+    <section class="ccbody" id="ccbody">
+        <p class="pheader" id="pheader" >Please select a Cloud Connector from the dropdown</p>
+        <label for="Cloud Connector">Choose a System:</label>
+        <select name="CCName" id="CCName">
+        <!--This section will be dynamically populated by script.js-->
+        </select>
+        <button id="getProperties" class="getProperties">Get Details</button>
+        <div id="displayProperties"></div>
+    </section>
+
+    <section class="addButtons">
+
+
+    </section>
+     
+    <div class="ccform" id="ccform">
+        <form action="javascript:ccSubmit()" class="ccformclass" id="ccformclass">
+            <label for="ccserver" >Cloud Connector URL:</label><br>
+            <input type="text" id="ccserver" name="ccserver" required><br>
+            <label for="ccdisname" >CC Display Name</label><br>
+            <input type="text" id="ccdisname" name="ccdisname" required><br>
+            <label for="user name" id="">User Name:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Submit">
+            <p style = "font-size:20px;font-style:bold;" class="validate", id="validate"></p>
+          </form> 
+          
+
+    </div>
+    <div class="tablecontainer" id="tablecontainer">
+         <h1 class="heading" id="heading">Cloud Connector Status</h1>
+         <table class="cctable" id="cctable">
+            <thead>
+                <tr>
+                    <th>Host</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>HA info</th>
+                    <th>Subaccounts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Host" id="testlabel1">loading...</td>
+                    <td data-label="Description" id="testlabel2">loading...</td>
+                    <td data-label="Status" id="testlabel3">loading...</td>
+                    <td data-label="#"><a href="javascript:btnFunction()" class="btn" id="firstbtn">Get ></a></td>
+                    <td data-label="#"><a href="javascript:btnSAdetails()" class="btn" id="sabtn">Get ></a></td>
+               </tr>
+            </tbody>
+         </table>
+    </div>
+
+
+    <div class="responsetable" id="responsetable">
+        <h1 class="ccheader" id="ccheader">placeholder</h1>
+        <table class="resptable" id="resptable">
+           <thead>
+               <tr>
+                   <th>HA configured?</th>
+                   <th>Role</th>
+                   <th>HA status</th>
+                   <th id="shadowmasterheader">Shadow/Master host</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td data-label="HA configured?" id="haconfigured">loading...</td>
+                   <td data-label="Role" id="harole">loading...</td>
+                   <td data-label="HA status" id="hastatus">loading...</td>
+                   <td data-label="Shadow/Master Host" id="shadowmasterhost">loading...</td>
+              </tr>
+           </tbody>
+        </table>
+   </div>
+
+   <div class="SAresponse" id="SAresponse">
+    <h1 class="SAheader" id="SAheader">Subaccount Info</h1>
+    <table class="SAtable" id="SAtable">
+       <thead>
+           <tr>
+               <th>Technical name</th>
+               <th>Display Name</th>
+               <th>Region Host</th>
+               <th>Location ID</th>
+               <th>State</th>
+               <th>Cert valid till</th>
+               <th>System Mapping</th>
+           </tr>
+       </thead>
+       <tbody class="SAdata" id="SAdata">
+        <tr >
+        <!--This section will be dynamically populated by script.js-->
+        </tr>
+       </tbody>
+    </table>
+</div>
+
+
+<div class="mappingResponse" id="mappingResponse">
+    <h1 class="mapheader" id="mapheader">System Mapping</h1>
+    <table class="maptable" id="maptable">
+       <thead>
+           <tr>
+               <th>Virtual Host:Port</th>
+               <th>Local Host:Port</th>
+               <th>Protocol</th>
+               <th>Backend Type</th>
+               <th>Description</th>
+           </tr>
+       </thead>
+       <tbody class="mapdata" id="mapdata">
+        <tr >
+        <!--This section will be dynamically populated by script.js-->
+        </tr>
+       </tbody>
+    </table>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
