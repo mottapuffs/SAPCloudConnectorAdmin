@@ -60,7 +60,8 @@ var mapheader = document.getElementById("mapheader")
       //if the data is retrieved successfully, populate the fields accordingly
     firstbtn.classList.remove('firstbtninvisble');
     sabtn.classList.remove('firstbtninvisble');
-    document.querySelector('#testlabel1').textContent=ccname.value ;
+    //document.querySelector('#testlabel1').textContent=ccname.value ;
+    document.querySelector('#ccbasic').insertAdjacentHTML('afterbegin','<td data-label="Host" id="testlabel1"><a href="'+ccname.value+'" target="_blank">'+ccname.value+'</a></td>\n');
     document.querySelector('#testlabel2').textContent=data.description ;
     document.querySelector('#testlabel3').textContent="Running" ;
     document.querySelector('#harole').textContent=data.ha.role ;
