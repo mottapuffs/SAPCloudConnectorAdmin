@@ -1,4 +1,1 @@
-[
-    {"ccserver":"Select a Cloud connector","ccauth":"","ccname":"Select a Cloud connector"}
-    
-]
+[{"ccserver":"Select a Cloud connector","ccauth":"","ccname":"Select a Cloud connector"},{"ccserver":"https://localhost:8195","ccauth":"Basic QWRtbmlzdHJhdG9yOkFtbXV0dHlAMjQ=","ccname":"cc test"}]
