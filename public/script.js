@@ -49,8 +49,7 @@ var mapheader = document.getElementById("mapheader")
     
     //if there is an error with retrieiving status of cloud connector , the labels will be accordingly marked
     if(data=="{error}"){
-      document.querySelector('#ccbasic').insertAdjacentHTML('afterbegin','<td data-label="Host" id="testlabel1"><a href="'+ccname.value+'" target="_blank">'+ccname.value+'</a></td>\n');
-      document.querySelector('#testlabel2').textContent="unable to retrieve description" ;
+      document.querySelector('.tlabel1').innerHTML='<a href="'+ccname.value+'"target="_blank">'+ccname.value+'</a>';
       document.querySelector('#testlabel3').textContent="Not Reachable" ;
       //Make the 'More info' button invisible in case of error
       firstbtn.classList.add('firstbtninvisble');
@@ -61,7 +60,7 @@ var mapheader = document.getElementById("mapheader")
     firstbtn.classList.remove('firstbtninvisble');
     sabtn.classList.remove('firstbtninvisble');
     //document.querySelector('#testlabel1').textContent=ccname.value ;
-    document.querySelector('#ccbasic').insertAdjacentHTML('afterbegin','<td data-label="Host" id="testlabel1"><a href="'+ccname.value+'" target="_blank">'+ccname.value+'</a></td>\n');
+    document.querySelector('.tlabel1').innerHTML='<a href="'+ccname.value+'"target="_blank">'+ccname.value+'</a>';
     document.querySelector('#testlabel2').textContent=data.description ;
     document.querySelector('#testlabel3').textContent="Running" ;
     document.querySelector('#harole').textContent=data.ha.role ;
