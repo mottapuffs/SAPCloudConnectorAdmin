@@ -49,8 +49,7 @@ var mapheader = document.getElementById("mapheader")
     
     //if there is an error with retrieiving status of cloud connector , the labels will be accordingly marked
     if(data=="{error}"){
-      document.querySelector('#testlabel1').textContent=ccname.value ;
-      document.querySelector('#testlabel2').textContent="unable to retrieve description" ;
+      document.querySelector('.tlabel1').innerHTML='<a href="'+ccname.value+'"target="_blank">'+ccname.value+'</a>';
       document.querySelector('#testlabel3').textContent="Not Reachable" ;
       //Make the 'More info' button invisible in case of error
       firstbtn.classList.add('firstbtninvisble');
@@ -60,7 +59,8 @@ var mapheader = document.getElementById("mapheader")
       //if the data is retrieved successfully, populate the fields accordingly
     firstbtn.classList.remove('firstbtninvisble');
     sabtn.classList.remove('firstbtninvisble');
-    document.querySelector('#testlabel1').textContent=ccname.value ;
+    //document.querySelector('#testlabel1').textContent=ccname.value ;
+    document.querySelector('.tlabel1').innerHTML='<a href="'+ccname.value+'"target="_blank">'+ccname.value+'</a>';
     document.querySelector('#testlabel2').textContent=data.description ;
     document.querySelector('#testlabel3').textContent="Running" ;
     document.querySelector('#harole').textContent=data.ha.role ;
